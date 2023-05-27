@@ -99,6 +99,7 @@ ggplot(data = ipc_paro, aes(x = Dates))+
   geom_vline(xintercept = as.Date("2012-4-1", "%Y-%m-%d"), color = "black", linewidth = 0.2)+
   scale_y_continuous(name = "Paro",
                      sec.axis = sec_axis(trans = ~., name = "Inflación"))+
+  scale_x_continuous(name="Año", trans="date")+
   labs(title = "Curva de Phillips en España",)+
   theme_light()+
   theme(plot.title = element_text(hjust = 0.5))
